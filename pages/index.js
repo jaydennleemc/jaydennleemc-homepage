@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Box, Container, Text, Stack, Divider } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import Education from "../components/educations";
 import Profile from "../components/profile";
 import Projects from "../components/project";
@@ -10,7 +10,8 @@ export default function Home() {
     <Container>
       {/* Profile */}
       <motion.div
-        key={"projects"}
+        id="profile"
+        key={"profile"}
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
@@ -19,8 +20,8 @@ export default function Home() {
       </motion.div>
 
       {/* Education */}
-      <motion.div
-        key={"projects"}
+      <motion.div id="education"
+        key={"education"}
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.5 }}
@@ -32,7 +33,8 @@ export default function Home() {
 
       {/* Working History */}
       <motion.div
-        key={"projects"}
+        id="works"
+        key={"works"}
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 2.0 }}
@@ -44,6 +46,7 @@ export default function Home() {
 
       {/* Projects */}
       <motion.div
+        id="projects"
         key={"projects"}
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

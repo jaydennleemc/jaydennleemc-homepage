@@ -37,14 +37,11 @@ const mobileMenu = () => {
         variant="outline"
       />
       <MenuList>
-        <NextLink href="#" passHref>
+        <NextLink href="#education" passHref>
           <MenuItem as={Link}>Works</MenuItem>
         </NextLink>
-        <NextLink href="#" passHref>
+        <NextLink href="#projects" passHref>
           <MenuItem as={Link}>Projects</MenuItem>
-        </NextLink>
-        <NextLink href="#" passHref>
-          <MenuItem as={Link}>Contacts</MenuItem>
         </NextLink>
       </MenuList>
     </Menu>
@@ -54,17 +51,16 @@ const mobileMenu = () => {
 
 const NavBar = () => {
   return (
-    <Box position={"fixed"} width={"100%"} zIndex={1} backgroundColor={useColorModeValue('#ffffff40', '#00000020')}>
+    <Box position={"fixed"} width={"100%"} zIndex={1} backgroundColor={useColorModeValue('#ffffff', '#1A202C')}>
       <Container>
         <Flex>
-          <Box p="4">
-            <Link href="/"><Code>Hello, World</Code></Link>
+          <Box p="2">
+            <Link href="#profile"><Code borderRadius={5} p={2}>Hello, World</Code></Link>
           </Box>
           <Box p="4" display={{ base: "none", md: "flex" }}>
             <Stack spacing={4} direction={"row"}>
-              <ListItem href={"#"}>Works</ListItem>
-              <ListItem href={"#"}>Projects</ListItem>
-              <ListItem href={"#"}>Contacts</ListItem>
+              <ListItem href={"#education"}>Works</ListItem>
+              <ListItem href={"#projects"}>Projects</ListItem>
             </Stack>
           </Box>
           <Spacer />
