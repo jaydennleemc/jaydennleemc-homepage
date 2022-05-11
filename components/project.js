@@ -37,13 +37,13 @@ const Projects = () => {
     <Box>
       <Text style={styles.section}>Projects</Text>
       <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-        {projects.map((project, index) => (
-          <LinkBox cursor={"pointer"}>
-            <GridItem key={project.src}>
-              <Image src={project.src} style={styles.image} objectFit="cover" />
-              <LinkOverlay href={project.link} target="_blank">
+        {projects.map((item, index) => (
+          <LinkBox cursor={"pointer"} key={item.toString()}>
+            <GridItem>
+              <Image src={item.src} style={styles.image} objectFit="cover" />
+              <LinkOverlay href={item.link} target="_blank">
                 <Text fontSize={"lg"} fontWeight={"500"}>
-                  {project.title}
+                  {item.title}
                 </Text>
               </LinkOverlay>
             </GridItem>

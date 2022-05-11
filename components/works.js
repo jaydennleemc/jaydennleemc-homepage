@@ -36,7 +36,7 @@ const Works = () => {
       </Text>
       <Box ml={2} mt={3}>
         {history.map((item, index) => (
-          <Stack direction="row" h="80px">
+          <Stack direction="row" h="80px" key={item.toString()}>
             <Text w={"40px"}>{item.year}</Text>
             <Divider orientation="vertical" />
             <Box>
