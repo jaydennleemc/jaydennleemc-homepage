@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+const basePath = process.env.NODE_ENV === 'production' ? '/repo' : '';
+
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/jaydennleemc/docs',
-  assetPrefix: '/jaydennleemc/docs/'
+  basePath,
+  assetPrefix: `${basePath}/`
 }
 
 module.exports = nextConfig
